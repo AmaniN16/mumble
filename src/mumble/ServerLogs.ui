@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Tokens</class>
+ <class>ServerLogs</class>
  <widget class="QDialog" name="ServerLogs">
   <property name="geometry">
    <rect>
     <x>0</x>
-    <y>-201</y>
+    <y>0</y>
     <width>541</width>
     <height>726</height>
    </rect>
@@ -48,10 +48,6 @@ Users with the appropriate permissions are able to see the server logs up to a c
        </property>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout">
      <item>
       <widget class="QPushButton" name="qpb1w">
        <property name="text">
@@ -59,21 +55,13 @@ Users with the appropriate permissions are able to see the server logs up to a c
        </property>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout">
      <item>
-      <widget class="QPushButton" name="qpb2w">
+      <widget class="QPushButton" name="qpb1m">
        <property name="text">
-        <string>&amp;2w</string>
+        <string>&amp;1m</string>
        </property>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout">
      <item>
       <widget class="QPushButton" name="qpb3w">
        <property name="text">
@@ -81,14 +69,10 @@ Users with the appropriate permissions are able to see the server logs up to a c
        </property>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout">
      <item>
-      <widget class="QPushButton" name="qpb1m">
+      <widget class="QPushButton" name="qpb2w">
        <property name="text">
-        <string>&amp;1m</string>
+        <string>&amp;2w</string>
        </property>
       </widget>
      </item>
@@ -108,46 +92,8 @@ Users with the appropriate permissions are able to see the server logs up to a c
  </widget>
  <tabstops>
   <tabstop>qlwServerLogs</tabstop>
-  <tabstop>qpb1d</tabstop>
-  <tabstop>qpb1w</tabstop>
-  <tabstop>qpb2w</tabstop>
-  <tabstop>qpb3w</tabstop>
-  <tabstop>qpb1m</tabstop>
   <tabstop>qbbButtons</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>qbbButtons</sender>
-   <signal>accepted()</signal>
-   <receiver></receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>227</x>
-     <y>617</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>qbbButtons</sender>
-   <signal>rejected()</signal>
-   <receiver>Tokens</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>295</x>
-     <y>623</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

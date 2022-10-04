@@ -10,8 +10,6 @@
 
 #include "ui_ServerLogs.h"
 
-class Connection;
-
 class ServerLogs : public QDialog, private Ui::ServerLogs {
 	Q_OBJECT;
 	Q_DISABLE_COPY(ServerLogs);
@@ -31,4 +29,4 @@ private:
 	void updateTimeSpan();*/
 };
 
-#endif // MUMBLE_MUMBLE_SERVERINFORMATION_H_
+#endif // MUMBLE_MUMBLE_SERVERLOGS_H_

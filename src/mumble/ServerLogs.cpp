@@ -3,7 +3,6 @@
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
-#include "Connection.h"
 #include "MainWindow.h"
 #include "NetworkConfig.h"
 #include "SSL.h"
@@ -11,14 +10,11 @@
 #include "ServerLogs.h"
 #include "UserModel.h"
 #include "Version.h"
-#include "ViewCert.h"
 #include "Global.h"
 
 #include <QTableWidgetItem>
 
 #include <boost/accumulators/accumulators.hpp>
-
-#include <cmath>
 
 QString ServerLogs::m_unknownStr = tr("Unknown");
 
@@ -27,12 +23,11 @@ ServerLogs::ServerLogs(QWidget *parent) : QDialog(parent) {
 
 	updateFields();
 
-	qbaDigest          = Global::get().sh->qbaDigest;
+	qbaDigest        = Global::get().sh->qbaDigest;
 	QStringList logs = Global::get().db->getLogs(qbaDigest);
 	logs.sort();
-	foreach (const QString &qs, logs) {
-		QListWidgetItem *qlwi = new QListWidgetItem(qs); 
-	}
+	foreach (const QString &qs, logs) { QListWidgetItem *qlwi = new QListWidgetItem(qs); }
+}
 
 void ServerLogs::ServerLogs() {
 	/*updateLogs();
