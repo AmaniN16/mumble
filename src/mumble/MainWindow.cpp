@@ -1553,6 +1553,7 @@ void MainWindow::on_qmServer_aboutToShow() {
 	qmServer->addAction(qaServerTokens);
 	qmServer->addAction(qaServerUserList);
 	qmServer->addAction(qaServerBanList);
+	qmServer->addAction(qaServerLogs);
 	qmServer->addSeparator();
 #if !defined(Q_OS_MAC)
 	// Don't add qaHide on macOS.
@@ -1567,6 +1568,7 @@ void MainWindow::on_qmServer_aboutToShow() {
 	qaServerUserList->setEnabled(Global::get().pPermissions & (ChanACL::Register | ChanACL::Write));
 	qaServerInformation->setEnabled(Global::get().uiSession != 0);
 	qaServerTokens->setEnabled(Global::get().uiSession != 0);
+	qaServerLogs->setEnabled(Global::get().uiSession != 0);
 
 	if (!qlServerActions.isEmpty()) {
 		qmServer->addSeparator();
@@ -1581,7 +1583,7 @@ void MainWindow::on_qaServerDisconnect_triggered() {
 		qaServerDisconnect->setEnabled(false);
 	}
 	if (Global::get().sh && Global::get().sh->isRunning())
-		Global::get().sh->disconnect();
+		Global::get().sh->disconnect();																			
 }
 
 void MainWindow::on_qaServerBanList_triggered() {
@@ -1633,6 +1635,16 @@ void MainWindow::on_qaServerTokens_triggered() {
 
 	tokenEdit = new Tokens(this);
 	tokenEdit->show();
+}
+
+void MainWindow::on_qaShowLogs_triggered() {
+	
+}
+
+
+void MainWindow::on_qaServerLogs_triggered() {
+	ServerLogs *logDialog = new ServerLogs(this);
+	logDialog->show();
 }
 
 void MainWindow::voiceRecorderDialog_finished(int) {
