@@ -892,9 +892,9 @@ the channel's context menu.</string>
     <string>Reset the avatar of the selected user.</string>
    </property>
   </action>
-  <action name="qaViewLogs">
+  <action name="qaServerLogs">
    <property name="text">
-	<string>&amp;View Logs</string>	  
+	<string>&amp;Server Logs</string>	  
    </property>
    <property name="toolTip">
 	<string>View server logs.</string>	  
