@@ -8,7 +8,7 @@
 #include "NetworkConfig.h"
 #include "SSL.h"
 #include "ServerHandler.h"
-#include "ViewLogs.h"
+#include "ServerLogs.h"
 #include "UserModel.h"
 #include "Version.h"
 #include "ViewCert.h"
@@ -20,34 +20,25 @@
 
 #include <cmath>
 
-QString ViewLogs::m_unknownStr = tr("Unknown");
+QString ServerLogs::m_unknownStr = tr("Unknown");
 
-ViewLogs::ViewLogs(QWidget *parent) : QDialog(parent) {
+ServerLogs::ServerLogs(QWidget *parent) : QDialog(parent) {
 	setupUi(this);
 
 	updateFields();
 
 	qbaDigest          = Global::get().sh->qbaDigest;
 	QStringList logs = Global::get().db->getLogs(qbaDigest);
-	tokens.sort();
-	foreach (const QString &qs, tokens) {
+	logs.sort();
+	foreach (const QString &qs, logs) {
 		QListWidgetItem *qlwi = new QListWidgetItem(qs); 
 	}
 
-void ViewLogs::ViewLogs() {
+void ServerLogs::ServerLogs() {
 	/*updateLogs();
 	updateTimeSpan();*/
 }
 
-void ViewLogs::on_okButton_clicked() {
-	accept();
-}
-
-void ViewLogs::on_viewCertButton_clicked() {
-	hide();
-
-	ViewCert certViewer(Global::get().sh->qscCert, this);
-	certViewer.exec();
-
+void ServerLogs::on_okButton_clicked() {
 	accept();
 }

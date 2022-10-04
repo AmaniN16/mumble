@@ -12,7 +12,7 @@
 
 class Connection;
 
-class ViewLogs : public QDialog, private Ui::ViewLogs {
+class ServerLogs : public QDialog, private Ui::ServerLogs {
 	Q_OBJECT;
 	Q_DISABLE_COPY(ServerLogs);
 

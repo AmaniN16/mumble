@@ -1637,11 +1637,6 @@ void MainWindow::on_qaServerTokens_triggered() {
 	tokenEdit->show();
 }
 
-void MainWindow::on_qaShowLogs_triggered() {
-	
-}
-
-
 void MainWindow::on_qaServerLogs_triggered() {
 	ServerLogs *logDialog = new ServerLogs(this);
 	logDialog->show();
