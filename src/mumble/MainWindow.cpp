@@ -41,6 +41,7 @@
 #include "SearchDialog.h"
 #include "ServerHandler.h"
 #include "ServerInformation.h"
+#include "ServerLogs.h"
 #include "Settings.h"
 #include "SvgIcon.h"
 #include "TalkingUI.h"
