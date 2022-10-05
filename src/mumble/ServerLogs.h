@@ -25,8 +25,8 @@ public slots:
 private:
 	static QString m_unknownStr;
 
-	/*void updateLogs();
-	void updateTimeSpan();*/
+	void updateTimeSpan();
+	void updateLogs();
 };
 
 #endif // MUMBLE_MUMBLE_SERVERLOGS_H_
